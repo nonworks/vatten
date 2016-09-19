@@ -2,7 +2,7 @@
   "name": "vatten",
   "version": "1.0.0",
   "description": "Essential algorithms for working according to the Nonworks streaming workflow",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "coffee -o lib/ -c *.coffee",
     "test": "echo \"Error: no test specified\" && exit 1"
