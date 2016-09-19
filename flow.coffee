@@ -39,13 +39,27 @@ Flow = (name) ->
         component.on 'drip', f.drip
         f
 
+    component.filter = component.createFilter
+
+    component.sort = (func) ->
+        s = Sorter()
+
+        s.setOrder(func) if func
+
+        component.on 'drip', (stuff) ->
+            s.drip(stuff)
+
+        return s
+
+
     # Binding
     component.registerEvents 'drip'
 
     component
 
 Event = require 'event'
-Distributary = require './distributary'
-Comflux = require './comflux'
-Filter = require './filter'
+Flow.Distributary = Distributary = require './distributary'
+Flow.Comflux = Comflux = require './comflux'
+Flow.Filter = Filter = require './filter'
+Flow.Sorter = Sorter = require './sorter'
 
