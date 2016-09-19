@@ -4,6 +4,7 @@
   "description": "Essential algorithms for working according to the Nonworks streaming workflow",
   "main": "index.js",
   "scripts": {
+    "build": "coffee -o lib/ -c *.coffee",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/nonworks/vatten/issues"
   },
-  "homepage": "https://github.com/nonworks/vatten#readme"
+  "homepage": "https://github.com/nonworks/vatten#readme",
+  "devDependencies": {
+    "coffee-script": "^1.10.0"
+  },
+  "dependencies": {
+    "component": "github:nonworks/component",
+    "event": "github:nonworks/event"
+  }
 }
