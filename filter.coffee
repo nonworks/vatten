@@ -16,7 +16,6 @@ module.exports = ->
                 if entry.sorting
                     # This is to prevent a past 'insert' message to be repeated
                     entry.sorting.action = 'none'
-                console.log action
                 component.trigger 'drip', entry
 
 
